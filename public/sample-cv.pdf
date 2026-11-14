@@ -1,0 +1,58 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1572 >>
+stream
+BT /F2 20 Tf 50 764 Td (Elnur Mammadov) Tj ET
+BT /F1 12 Tf 50 746 Td (Backend Developer) Tj ET
+BT /F1 10 Tf 50 730 Td (elnur.mammadov@example.com | +994 50 123 45 67) Tj ET
+BT /F1 10 Tf 50 714 Td (github.com/elnur-m | https://elnur.dev) Tj ET
+BT /F2 12 Tf 50 682 Td (SUMMARY) Tj ET
+BT /F1 10 Tf 50 666 Td (Backend developer building REST APIs and cloud services for fintech products.) Tj ET
+BT /F2 12 Tf 50 634 Td (EXPERIENCE) Tj ET
+BT /F1 10 Tf 50 618 Td (Senior Backend Developer - Caspian Systems 2020 - Present) Tj ET
+BT /F1 10 Tf 50 602 Td (- Built REST API services with Node.js and TypeScript, deployed with Docker on AWS) Tj ET
+BT /F1 10 Tf 50 586 Td (Backend Developer - Atlas Analytics 2017 - 2020) Tj ET
+BT /F1 10 Tf 50 570 Td (- Developed SQL reporting and Python data pipelines using a Git workflow) Tj ET
+BT /F2 12 Tf 50 538 Td (EDUCATION) Tj ET
+BT /F1 10 Tf 50 522 Td (Master of Science in Computer Science - ADA University, 2017) Tj ET
+BT /F1 10 Tf 50 506 Td (Bachelor in Information Technologies - Azerbaijan Technical University, 2015) Tj ET
+BT /F2 12 Tf 50 474 Td (SKILLS) Tj ET
+BT /F1 10 Tf 50 458 Td (JavaScript \(Advanced\), TypeScript, Node.js, Docker, AWS, SQL, Python \(Intermediate\), Git, Testing) Tj ET
+BT /F1 10 Tf 50 442 Td (Communication, Teamwork) Tj ET
+BT /F2 12 Tf 50 410 Td (CERTIFICATES) Tj ET
+BT /F1 10 Tf 50 394 Td (AWS Certified Developer, 2021) Tj ET
+BT /F2 12 Tf 50 362 Td (LANGUAGES) Tj ET
+BT /F1 10 Tf 50 346 Td (Azerbaijani - Native) Tj ET
+BT /F1 10 Tf 50 330 Td (English - C1) Tj ET
+BT /F1 10 Tf 50 314 Td (Russian - B1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001874 00000 n 
+0000001944 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2019
+%%EOF

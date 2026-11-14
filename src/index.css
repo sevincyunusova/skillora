@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme='light'] {
+  --bg: 247 247 242;
+  --surface: 252 252 249;
+  --surface2: 234 234 229;
+  --ink: 32 34 31;
+  --mute: 104 108 94;
+  --line: 215 215 206;
+  --accent: 213 228 90;
+  --accent-ink: 32 34 31;
+  --brand: 116 123 80;
+  --violet: 130 117 143;
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  --bg: 28 30 27;
+  --surface: 38 41 36;
+  --surface2: 50 54 47;
+  --ink: 240 240 233;
+  --mute: 160 165 148;
+  --line: 66 70 60;
+  --accent: 213 228 90;
+  --accent-ink: 32 34 31;
+  --brand: 156 164 112;
+  --violet: 160 148 176;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: auto; }
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  font-feature-settings: 'ss01', 'cv11';
+  overflow-x: hidden;
+}
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after {
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease, fill 0.45s ease, stroke 0.45s ease !important;
+}
+::selection { background: rgb(var(--accent)); color: #20221f; }
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; border-radius: 6px; }
+[data-theme='light'] :focus-visible { outline-color: rgb(var(--brand)); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgb(var(--line)); border-radius: 8px; border: 2px solid rgb(var(--bg)); }
+
+@layer components {
+  .font-display { letter-spacing: -0.02em; }
+  .eyebrow { @apply font-mono text-[11px] uppercase tracking-[0.16em] text-mute; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-[transform,background-color,box-shadow,opacity] duration-200 select-none disabled:cursor-not-allowed disabled:opacity-50 active:scale-[0.97];
+  }
+  .btn-primary { @apply bg-accent text-accent-ink hover:shadow-[0_0_0_4px_rgb(var(--accent)/0.25)]; }
+  .btn-dark { @apply bg-ink text-bg hover:opacity-90; }
+  .btn-ghost { @apply border border-line bg-transparent text-ink hover:bg-surface2; }
+  .btn-danger { @apply border border-red-500/40 text-red-600 hover:bg-red-500/10 dark:text-red-400; }
+  .btn-sm { @apply px-3.5 py-1.5 text-xs; }
+  .card { @apply rounded-2xl border border-line bg-surface; }
+  .input {
+    @apply w-full rounded-xl border border-line bg-bg px-3.5 py-2.5 text-sm text-ink placeholder:text-mute/70 transition-colors focus:border-brand focus:outline-none focus:ring-2 focus:ring-accent/40;
+  }
+  .label { @apply mb-1.5 block text-xs font-medium text-mute; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-line bg-surface2/60 px-2.5 py-0.5 text-xs text-ink; }
+  .h-page { @apply font-display text-3xl font-bold leading-tight md:text-4xl; }
+  .th { @apply px-4 py-3 text-left font-mono text-[11px] font-medium uppercase tracking-wider text-mute; }
+  .td { @apply px-4 py-3 align-middle text-sm; }
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+[data-theme='dark'] .grain::after { mix-blend-mode: screen; opacity: 0.05; }
+
+.hairgrid {
+  background-image: linear-gradient(rgb(var(--line) / 0.6) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--line) / 0.6) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.marquee { animation: marquee 38s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+.custom-cursor-area { cursor: none; }
+
+.stage-dot { animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.35; transform: scale(0.8); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .marquee { animation: none; }
+}
+
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  .no-print { display: none !important; }
+  .print-area { display: block !important; }
+  aside, header.app-header { display: none !important; }
+  main { padding: 0 !important; margin: 0 !important; }
+  .card { border-color: #ccc !important; break-inside: avoid; background: #fff !important; }
+  @page { margin: 14mm; }
+}
